@@ -13,6 +13,5 @@ public class Statut {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
     private boolean etat;
 }

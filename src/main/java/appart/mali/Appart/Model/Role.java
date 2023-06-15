@@ -15,24 +15,28 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
+
     private Long id;
+    public ERole nom;
 
-    private Long idRole;
-    private String nom;
 
-    public Long getIdRole() {
-        return idRole;
+    public Role(){
+
     }
 
-    public void setIdRole(Long idRole) {
-        this.idRole = idRole;
+    public Long getId() {
+        return id;
     }
 
-    public String getNom() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public ERole getNom() {
         return nom;
     }
 
-    public void setNom(String nom) {
+    public void setNom(ERole nom) {
         this.nom = nom;
     }
 }

@@ -17,14 +17,60 @@ public class Users {
     private String nom_renom;
     private String numero;
     private String password;
-
     @ManyToOne
     private Statut statut;
     @ManyToOne
     private Role role;
 
+    public Users (){
 
+   }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getNom_renom() {
+        return nom_renom;
+    }
+
+    public void setNom_renom(String nom_renom) {
+        this.nom_renom = nom_renom;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Statut getStatut() {
+        return statut;
+    }
+
+    public void setStatut(Statut statut) {
+        this.statut = statut;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }
