@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/Users")
+@RequestMapping("/users")
 public class UsersController {
     public final UsersService usersService;
 
@@ -24,7 +24,7 @@ public class UsersController {
 
     // user ajout
     @PostMapping(value = "/ajouter")
-    public Object ajouter(Users users){
+    public Object ajouter(@RequestBody Users users){
         try{
             usersService.ajouter(users);
             return "Ajout reussi";

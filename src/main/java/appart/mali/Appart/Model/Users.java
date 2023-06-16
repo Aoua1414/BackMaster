@@ -14,7 +14,7 @@ public class Users {
     @Column(name = "id", nullable = false)
 
     private Long id;
-    private String nom_renom;
+    private String nom_prenom;
     private String numero;
     private String password;
     @ManyToOne
@@ -35,11 +35,11 @@ public class Users {
     }
 
     public String getNom_renom() {
-        return nom_renom;
+        return nom_prenom;
     }
 
     public void setNom_renom(String nom_renom) {
-        this.nom_renom = nom_renom;
+        this.nom_prenom = nom_renom;
     }
 
     public String getNumero() {

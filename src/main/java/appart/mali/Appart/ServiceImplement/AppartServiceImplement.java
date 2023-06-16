@@ -8,13 +8,17 @@ import appart.mali.Appart.Service.AppartService;
 import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AppartServiceImplement  implements AppartService {
 
 
     public Users users;
+    @Autowired
+    private UsersRepository usersRepository;
     @Autowired
     private AppartRepository appartRepository;
     @Override
@@ -55,11 +59,9 @@ public class AppartServiceImplement  implements AppartService {
     }
 
     // Appart par user
-//    @Override
-//    public List<Appartements> appartdunuser(Long id) {
-//
-//        Users users = usersRepository.findById(id).get();
-//
-//        return appartRepository.findByUser(users);
-//    }
+    @Override
+    public List<Appartements> appartdunuser(Long id) {
+        Users users = usersRepository.findById(id).get();
+        return appartRepository.findByUser(users);
+    }
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface AppartService {
 
     // creation appart
@@ -21,10 +21,6 @@ public interface AppartService {
     //Afficher apparts
     List<Appartements> afficher();
 
-
-
-
     // Afficher appart d'un user
-
-//    *****************List<Appartements> appartdunuser(Long id);***********//////
+    List<Appartements> appartdunuser(Long id);
 }
